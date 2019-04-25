@@ -31,6 +31,13 @@ Numpy/Scipyが使えなかったらPythonを使うだろうか？
 ### Fortranを使ってもらうには
 
 Numpy/Scipyみたいな仕様のライブラリがあればよいのではないか。
+
+
++++
+
+
+### Fortranを使ってもらうには
+
 今回はそれに近いfortran-utilsを使ってみます。
 
 
