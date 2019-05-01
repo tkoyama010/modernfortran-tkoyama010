@@ -22,7 +22,10 @@
 
 ### はじめに
 
-Numpy/Scipyが使えなかったらPythonを使うだろうか？
+![Numpy](https://camo.githubusercontent.com/b3ffb735f64eea19dd6790720c0d7e8db71931aa/68747470733a2f2f63646e2e7261776769742e636f6d2f6e756d70792f6e756d70792f6d61737465722f6272616e64696e672f69636f6e732f6e756d70796c6f676f2e737667)
+![Sicpy](https://www.fullstackpython.com/img/logos/scipy.png)
+
+が使えなかったらPythonを使うだろうか？
 
 
 ---
