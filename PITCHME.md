@@ -46,10 +46,13 @@ Numpy/Scipyみたいな仕様のライブラリがあればよいのではない
 
 ### fortran-utilsとは？
 
-![certik](https://avatars0.githubusercontent.com/u/20568?s=400&v=4)氏により2016年まで開発されていたfortranの便利なutils集です。
+[certik](https://github.com/certik)氏により2016年まで開発されていたfortranの便利なutils集です。
 
 https://github.com/certik/fortran-utils
 
+一部テストが通らない部分があったのでforkして変更をしました。
+
+https://github.com/tkoyama010/fortran-utils
 
 ---
 
