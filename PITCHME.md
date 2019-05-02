@@ -22,9 +22,7 @@
 
 ### はじめに
 
-<img src="https://www.fullstackpython.com/img/logos/numpy.jpg" width="200" height="100">
-
-<img src="https://www.fullstackpython.com/img/logos/scipy.png" width="200" height="100">
+<img src="https://3.bp.blogspot.com/-CR-N5Kb5OOw/WoO1nOR-xHI/AAAAAAAAXKw/WJ0tWg108Zw_Va8Z1JCpnIHrDZz5YwSJQCLcBGAs/s1600/logo-stack-python.png" width="200" height="100">
 
 が使えなかったらPythonを使うだろうか？
 
