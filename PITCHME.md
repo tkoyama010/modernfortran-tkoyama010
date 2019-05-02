@@ -19,7 +19,7 @@
 言語の仕様ではなくライブラリが使えるからでは？
 
 
-+++
++++?image=assets/img/stormtrooper-on-sand.jpg
 
 
 ### はじめに
