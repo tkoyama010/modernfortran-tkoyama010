@@ -121,7 +121,6 @@ call sort(a)
 call assert(all(a == [1, 2, 3, 4, 5]))
 end program
 ```
-@[8](sortも可能です)
 
 
 ---
@@ -143,7 +142,6 @@ call assert(all(argsort([1, 2, 2, 2, 3]) == [1, 2, 3, 4, 5]))
 call assert(all(argsort([2, 2, 2, 3, 1]) == [5, 2, 3, 1, 4]))
 end program
 ```
-@[8](argsortも可能です)
 
 
 ---
@@ -152,10 +150,36 @@ end program
 ### Saving/loading 2D arrays (``savetxt``, ``loadtxt``)
 
 
+
+
 ---
 
 
 ### Saving/loading 2D arrays (``savetxt``, ``loadtxt``)
+
+
+```
+program test_loadtxt
+use types, only: dp
+use utils, only: loadtxt, savetxt, assert
+implicit none
+
+real(dp) :: d(3, 2), e(2, 3)
+real(dp), allocatable :: d2(:, :)
+d = reshape([1, 2, 3, 4, 5, 6], [3, 2])
+call savetxt("tmp.dat", d)
+call loadtxt("tmp.dat", d2)
+call assert(all(shape(d2) == [3, 2]))
+call assert(all(d == d2))
+
+e = reshape([1, 2, 3, 4, 5, 6], [2, 3])
+call savetxt("tmp.dat", e)
+call loadtxt("tmp.dat", d2)
+call assert(all(shape(d2) == [2, 3]))
+call assert(all(e == d2))
+
+end program
+```
 
 
 ---
