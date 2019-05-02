@@ -19,7 +19,7 @@
 言語の仕様ではなくライブラリが使えるからでは？
 
 
-+++?https://3.bp.blogspot.com/-CR-N5Kb5OOw/WoO1nOR-xHI/AAAAAAAAXKw/WJ0tWg108Zw_Va8Z1JCpnIHrDZz5YwSJQCLcBGAs/s1600/logo-stack-python.png
+---?https://3.bp.blogspot.com/-CR-N5Kb5OOw/WoO1nOR-xHI/AAAAAAAAXKw/WJ0tWg108Zw_Va8Z1JCpnIHrDZz5YwSJQCLcBGAs/s1600/logo-stack-python.png
 
 
 ### Introduction
@@ -333,10 +333,10 @@ end program
 ### HDF5 interface
 
 
----
+---?https://upload.wikimedia.org/wikipedia/commons/2/29/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Rotterdam%29_-_Google_Art_Project.jpg
 
 
-### まとめ?https://upload.wikimedia.org/wikipedia/commons/2/29/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Rotterdam%29_-_Google_Art_Project.jpg
+### まとめ
 
 言語の表現を近づければみんなが使ってくれる？
 
