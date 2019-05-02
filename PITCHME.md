@@ -90,7 +90,7 @@ Euler's equation $e^{i\pi}+1=0$
 ```
 import numpy as np
 
-abs(np.e**(np.pi*1j)+1) < 10**(-5)
+abs(np.e**(np.pi*1j) + 1) < 10**(-5)
 ```
 
 
