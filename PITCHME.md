@@ -221,6 +221,14 @@ end program
 
 ### Lapack interface (det)
 
+```
+import numpy as np
+import numpy.linalg as LA
+
+A = [[ 1, 4, 7], [ 2, 5, 8], [ 3, 6, -9]]
+detA = LA.det(A)
+print(abs(detA - 54.0) < 1.0e-09)
+```
 
 ---
 
