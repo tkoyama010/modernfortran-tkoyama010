@@ -135,7 +135,7 @@ use types, only: dp
 use utils, only: assert
 use sorting, only: argsort
 implicit none
-integer :: a(:)
+integer :: a(5)
 call assert(all(argsort([4, 3, 2, 1, 5]) == [4, 3, 2, 1, 5]))
 call assert(all(argsort([10, 9, 8, 7, 6]) == [5, 4, 3, 2, 1]))
 call assert(all(argsort([1, -1]) == [2, 1]))
