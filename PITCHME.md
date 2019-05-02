@@ -265,7 +265,30 @@ end program
 ---
 
 
-### Meshes (exponential, uniform)
+### eigen value problem
+
+```
+program test_eig
+use types, only: dp
+use utils, only: assert
+use linalg, only: eig, eye
+use constants, only : i_
+implicit none
+
+! test eigenvalue comutation for general matrices:
+
+real(dp), parameter :: eps = 1e-9_dp
+real(dp) :: B(5, 5)
+complex(dp) :: lamb(5), cb(5, 5)
+
+! test a multiple of the unit matrix:
+B = 3*eye(5)
+call eig(B, lamb, cb)
+call assert(maxval(abs(lamb - 3.0_dp)) < eps)  ! all eigenvalues are 3
+call assert(maxval(abs(cb - cmplx(eye(5)))) < eps)  ! eigenvectors are cartesian unit basis vectors
+
+end program
+```
 
 
 ---
