@@ -273,6 +273,7 @@ import numpy
 import numpy.linalg as LA
 
 B = 3.0*np.eye(5)
+lamb, cb = LA.eig(B)
 print(np.max((lamb-3) < 1.0e-09))
 print(np.max((cb-np.eye(5)) < 1.0e-09))
 ```
