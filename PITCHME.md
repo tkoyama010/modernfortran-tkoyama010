@@ -115,7 +115,7 @@ a = [4, 3, 2, 1, 5]
 call sort(a)
 call assert(all(a == [1, 2, 3, 4, 5]))
 ```
-@[8](Sortも可能です)
+@[8](sortも可能です)
 
 
 ---
@@ -125,13 +125,13 @@ call assert(all(a == [1, 2, 3, 4, 5]))
 
 
 ```
-call assert(all(argsort([4.0_dp, 3.0_dp, 2.0_dp, 1.0_dp, 5.0_dp]) == &
-        [4, 3, 2, 1, 5]))
-call assert(all(argsort([10.0_dp, 9.0_dp, 8.0_dp, 7.0_dp, 6.0_dp]) == &
-        [5, 4, 3, 2, 1]))
-call assert(all(argsort([1.0_dp, -1.0_dp]) == [2, 1]))
+call assert(all(argsort([4, 3, 2, 1, 5]) == [4, 3, 2, 1, 5]))
+call assert(all(argsort([10, 9, 8, 7, 6]) == [5, 4, 3, 2, 1]))
+call assert(all(argsort([1, -1]) == [2, 1]))
+call assert(all(argsort([1, 2, 2, 2, 3]) == [1, 2, 3, 4, 5]))
+call assert(all(argsort([2, 2, 2, 3, 1]) == [5, 2, 3, 1, 4]))
 ```
-@[8](ArgSortも可能です)
+@[8](argsortも可能です)
 
 
 ---
