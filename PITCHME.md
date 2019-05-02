@@ -78,8 +78,20 @@ https://github.com/tkoyama010/fortran-utils
 
 
 ### Types (``dp``)
----?https://github.com/tkoyama010/fortran-utils/blob/master/tests/constants/test_constants.f90
+---
+```
+program test_constants
+use types, only: dp
+use constants, only: pi, e_, i_
+use utils, only: assert
+implicit none
 
+! Euler's identity:
+call assert(abs(e_**(pi*i_) + 1) < 1e-15_dp)
+
+end program
+```
+@[8]Eulerの等式
 
 ---
 
