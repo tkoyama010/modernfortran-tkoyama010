@@ -18,10 +18,7 @@
 ---
 
 
-### Introduction
-
-
-ライブラリが使えなかったらPythonを使うだろうか？
+### ライブラリが使えなかったらPythonを使うだろうか？
 ![NUMPY](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/NumPy_logo.svg/1920px-NumPy_logo.svg.png)
 
 
