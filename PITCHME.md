@@ -109,11 +109,13 @@ end program
 
 
 ```
+program test_sort
 integer :: a(5)
 real(dp) :: b(5), c(5), vec(2, 5)
 a = [4, 3, 2, 1, 5]
 call sort(a)
 call assert(all(a == [1, 2, 3, 4, 5]))
+end program
 ```
 @[8](sortも可能です)
 
