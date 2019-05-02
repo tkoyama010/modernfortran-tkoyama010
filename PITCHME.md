@@ -19,18 +19,13 @@
 言語の仕様ではなくライブラリが使えるからでは？
 
 
----
+---?https://www.google.com/search?biw=1280&bih=631&tbm=isch&sa=1&ei=Gy_LXIuYDqWSr7wPipK9wA0&q=Python&oq=Python&gs_l=img.3..35i39l2j0l8.18615.20039..20325...1.0..0.112.578.6j1......1....1..gws-wiz-img.......0i4j0i30.JORaiqcTkLk#imgrc=waOjjGKvn06ezM:
 
 
 ### Introduction
 
 
 ライブラリが使えなかったらPythonを使うだろうか？
-@div[left-50 fragment]
-![Python](https://www.dataiku.com/static/img/learn/guide/getting-started/getting-started-with-python/logo-stack-python.png)
-@divend
-
-(画像は https://www.dataiku.com より)
 
 
 ---
