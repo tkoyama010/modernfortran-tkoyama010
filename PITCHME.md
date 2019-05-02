@@ -83,7 +83,7 @@ https://github.com/tkoyama010/fortran-utils
 ---
 
 
-### Constants (``pi``, ``e_``, ``i_``)
+### Constants
 
 - Eulerの公式 $e^{i\pi}+1=0$
 
