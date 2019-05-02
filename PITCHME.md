@@ -175,6 +175,15 @@ end program
 ### Saving/loading 2D arrays
 
 
+```
+import numpy as np
+
+d = np.array([[1, 3, 5], [2, 4, 6]])
+np.savetxt("tmp.dat", d)
+d2 = np.loadtxt("tmp.dat")
+print(np.all(d == d2))
+print(d.shape == d2.shape)
+```
 
 
 ---
