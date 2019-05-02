@@ -285,6 +285,6 @@ end program
 
 ### まとめ
 
-- 言語を近づければみんなが使ってくれる？
+言語の表現を近づければみんなが使ってくれる？
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Rotterdam%29_-_Google_Art_Project.jpg" width="400" height="400">
