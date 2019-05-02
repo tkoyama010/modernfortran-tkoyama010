@@ -19,7 +19,7 @@
 言語の仕様ではなくライブラリが使えるからでは？
 
 
----?https://www.google.com/search?biw=1280&bih=631&tbm=isch&sa=1&ei=Gy_LXIuYDqWSr7wPipK9wA0&q=Python&oq=Python&gs_l=img.3..35i39l2j0l8.18615.20039..20325...1.0..0.112.578.6j1......1....1..gws-wiz-img.......0i4j0i30.JORaiqcTkLk#imgrc=waOjjGKvn06ezM:
+---?https://s3-ap-northeast-1.amazonaws.com/s3.techplay.jp/tp-images/column/1429/6375fc39bf885c1ec9d99445f8720127f1f728ac.png
 
 
 ### Introduction
