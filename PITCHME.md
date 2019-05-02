@@ -327,6 +327,6 @@ end program
 
 ---
 
-### まとめ
+#### まとめ
 
 ![BABEL](https://upload.wikimedia.org/wikipedia/commons/2/29/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Rotterdam%29_-_Google_Art_Project.jpg)
