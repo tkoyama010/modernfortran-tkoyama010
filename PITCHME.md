@@ -147,7 +147,7 @@ end program
 ---
 
 
-### Saving/loading 2D arrays (``savetxt``, ``loadtxt``)
+### Saving/loading 2D arrays
 
 
 
@@ -155,7 +155,7 @@ end program
 ---
 
 
-### Saving/loading 2D arrays (``savetxt``, ``loadtxt``)
+### Saving/loading 2D arrays
 
 
 ```
