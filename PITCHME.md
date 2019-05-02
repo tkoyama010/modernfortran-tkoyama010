@@ -85,7 +85,7 @@ https://github.com/tkoyama010/fortran-utils
 
 ### Constants
 
-- Eulerの公式 $e^{i\pi}+1=0$
+Euler's equation $e^{i\pi}+1=0$
 
 ```
 program test_constants
