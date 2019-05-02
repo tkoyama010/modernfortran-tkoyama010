@@ -19,7 +19,7 @@
 言語の仕様ではなくライブラリが使えるからでは？
 
 
----?https://3.bp.blogspot.com/-CR-N5Kb5OOw/WoO1nOR-xHI/AAAAAAAAXKw/WJ0tWg108Zw_Va8Z1JCpnIHrDZz5YwSJQCLcBGAs/s1600/logo-stack-python.png
+---
 
 
 ### Introduction
@@ -27,9 +27,10 @@
 
 ライブラリが使えなかったらPythonを使うだろうか？
 @div[left-50 fragment]
-![Python](https://cdn-images-1.medium.com/max/800/1*Y2v3PrF1rUQRUHwOcXJznA.png)
+![Python](https://www.dataiku.com/static/img/learn/guide/getting-started/getting-started-with-python/logo-stack-python.png)
 @divend
-(画像はhttps://cdn-images-1.medium.com より)
+
+(画像は https://www.dataiku.com より)
 
 
 ---
