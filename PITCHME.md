@@ -78,7 +78,6 @@ https://github.com/tkoyama010/fortran-utils
 
 
 ### Types (``dp``)
----
 ```
 program test_constants
 use types, only: dp
@@ -91,7 +90,7 @@ call assert(abs(e_**(pi*i_) + 1) < 1e-15_dp)
 
 end program
 ```
-@[8]Eulerの等式
+@[8](Eulerの等式)
 
 ---
 
