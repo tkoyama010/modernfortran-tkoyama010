@@ -1,10 +1,6 @@
 #Enable latex
 mathjax : TeX-MML-AM_HTMLorMML-full
 
-theme : sky
-
 theme-override : assets/css/PITCHME.css
-
-layout : top
 
 transition : none
