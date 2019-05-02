@@ -85,6 +85,7 @@ https://github.com/tkoyama010/fortran-utils
 
 ### Constants (``pi``, ``e_``, ``i_``)
 
+Eulerの公式 $e^{i\pi}+1=0$
 
 ```
 program test_constants
@@ -98,8 +99,7 @@ call assert(abs(e_**(pi*i_) + 1) < 1e-15_dp)
 
 end program
 ```
-@[8](Eulerの公式)
-$e^{ i\pi } + 1 = 0$
+@[8]
 
 
 ---
