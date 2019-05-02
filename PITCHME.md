@@ -110,6 +110,10 @@ end program
 
 ```
 program test_sort
+use types, only: dp
+use utils, only: assert
+use sorting, only: sort, sortpairs
+implicit none
 integer :: a(5)
 real(dp) :: b(5), c(5), vec(2, 5)
 a = [4, 3, 2, 1, 5]
