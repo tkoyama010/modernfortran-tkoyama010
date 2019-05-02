@@ -19,13 +19,14 @@
 言語の仕様ではなくライブラリが使えるからでは？
 
 
----?https://s3-ap-northeast-1.amazonaws.com/s3.techplay.jp/tp-images/column/1429/6375fc39bf885c1ec9d99445f8720127f1f728ac.png
+---
 
 
 ### Introduction
 
 
 ライブラリが使えなかったらPythonを使うだろうか？
+![NUMPY](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/NumPy_logo.svg/1920px-NumPy_logo.svg.png)
 
 
 ---
