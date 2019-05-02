@@ -230,7 +230,7 @@ detA = LA.det(A)
 print(abs(detA - 54.0) < 1.0e-09)
 ```
 
----
++++
 
 
 ### Lapack interface (det)
