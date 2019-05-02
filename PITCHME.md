@@ -262,6 +262,22 @@ call assert(abs(Bdet - (147.0_dp, -93.0_dp)) < eps)
 end program
 ```
 
+
+---
+
+
+### eigen value problem
+
+```
+import numpy
+import numpy.linalg as LA
+
+B = 3.0*np.eye(5)
+print(np.max((lamb-3) < 1.0e-09))
+print(np.max((cb-np.eye(5)) < 1.0e-09))
+```
+
+
 ---
 
 
