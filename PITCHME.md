@@ -125,11 +125,17 @@ call assert(all(a == [1, 2, 3, 4, 5]))
 
 
 ```
+program test_argsort
+use types, only: dp
+use utils, only: assert
+use sorting, only: argsort
+implicit none
 call assert(all(argsort([4, 3, 2, 1, 5]) == [4, 3, 2, 1, 5]))
 call assert(all(argsort([10, 9, 8, 7, 6]) == [5, 4, 3, 2, 1]))
 call assert(all(argsort([1, -1]) == [2, 1]))
 call assert(all(argsort([1, 2, 2, 2, 3]) == [1, 2, 3, 4, 5]))
 call assert(all(argsort([2, 2, 2, 3, 1]) == [5, 2, 3, 1, 4]))
+end program
 ```
 @[8](argsortも可能です)
 
