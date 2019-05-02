@@ -6,7 +6,7 @@
 ---
 
 
-### はじめに
+### Introduction
 
 なぜその言語を使うの?
 
@@ -14,7 +14,7 @@
 +++
 
 
-### はじめに
+### Introduction
 
 言語の仕様ではなくライブラリが使えるからでは？
 
@@ -22,7 +22,7 @@
 +++?https://3.bp.blogspot.com/-CR-N5Kb5OOw/WoO1nOR-xHI/AAAAAAAAXKw/WJ0tWg108Zw_Va8Z1JCpnIHrDZz5YwSJQCLcBGAs/s1600/logo-stack-python.png
 
 
-### はじめに
+### Introduction
 
 
 ライブラリが使えなかったらPythonを使うだろうか？
@@ -32,17 +32,13 @@
 ---
 
 
-### Fortranを使ってもらうには
-
-Numpy/Scipyみたいな仕様のライブラリがあればよいのではないか。
+### Numpy/Scipyみたいな仕様のライブラリがあればよいのではないか。
 
 
 +++
 
 
-### Fortranを使ってもらうには
-
-今回はそれに近いfortran-utilsを使ってみます。
+### 今回はそれに近いfortran-utilsを使ってみます。
 
 
 ---
@@ -340,9 +336,8 @@ end program
 ---
 
 
-### まとめ
+### まとめ?https://upload.wikimedia.org/wikipedia/commons/2/29/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Rotterdam%29_-_Google_Art_Project.jpg
 
 言語の表現を近づければみんなが使ってくれる？
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Rotterdam%29_-_Google_Art_Project.jpg" width="400" height="400">
-(https://upload.wikimedia.org より)
+(画像はhttps://upload.wikimedia.org より)
