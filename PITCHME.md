@@ -246,3 +246,8 @@ end program
 
 
 ### まとめ
+
+- Numpy/Scipyは数値計算系がPythonを使う主な理由です。
+- Fortranでもfortran-utilsを使えばNumpy/Scipyと同じことができる？
+- fortran-utilsを充実させればみんながFortranを使ってくれる！？
+- というかもうFortranの文法をPythonと同一に進化させればいい（この行はネタです）。
