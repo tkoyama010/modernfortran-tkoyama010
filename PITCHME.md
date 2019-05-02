@@ -136,11 +136,8 @@ use utils, only: assert
 use sorting, only: argsort
 implicit none
 integer :: a(5)
-call assert(all(argsort([4, 3, 2, 1, 5]) == [4, 3, 2, 1, 5]))
-call assert(all(argsort([10, 9, 8, 7, 6]) == [5, 4, 3, 2, 1]))
-call assert(all(argsort([1, -1]) == [2, 1]))
-call assert(all(argsort([1, 2, 2, 2, 3]) == [1, 2, 3, 4, 5]))
-call assert(all(argsort([2, 2, 2, 3, 1]) == [5, 2, 3, 1, 4]))
+a = [4, 3, 2, 1, 5]
+call assert(all(argsort(a) == [4, 3, 2, 1, 5]))
 end program
 ```
 
