@@ -83,7 +83,21 @@ https://github.com/tkoyama010/fortran-utils
 ---
 
 
-### Constants
+### Constants in Numpy/Scipy
+
+Euler's equation $e^{i\pi}+1=0$
+
+```
+import numpy as np
+
+abs(np.e**(np.pi*1j)+1) < 10**(-5)
+```
+
+
++++
+
+
+### Constants in fortran-utils
 
 Euler's equation $e^{i\pi}+1=0$
 
@@ -99,7 +113,6 @@ call assert(abs(e_**(pi*i_) + 1) < 1e-15_dp)
 
 end program
 ```
-@[8]
 
 
 ---
