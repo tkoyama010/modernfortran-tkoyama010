@@ -26,7 +26,10 @@
 
 
 ライブラリが使えなかったらPythonを使うだろうか？
-(画像はhttps://3.bp.blogspot.com より)
+@div[left-50 fragment]
+![Python](https://cdn-images-1.medium.com/max/800/1*Y2v3PrF1rUQRUHwOcXJznA.png)
+@divend
+(画像はhttps://cdn-images-1.medium.com より)
 
 
 ---
