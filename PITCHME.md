@@ -85,8 +85,7 @@ https://github.com/tkoyama010/fortran-utils
 
 ### Constants (``pi``, ``e_``, ``i_``)
 
-- 数式も使える　$ F = \frac{d^2 x}{d t^2} $ はず
-Eulerの公式 $e^{i\pi}+1=0$
+- Eulerの公式 $e^{i\pi}+1=0$
 
 ```
 program test_constants
