@@ -98,7 +98,8 @@ call assert(abs(e_**(pi*i_) + 1) < 1e-15_dp)
 
 end program
 ```
-@[8](Eulerの等式)
+@[7](Eulerの公式)
+@[8]($e^{ i\pi } + 1 = 0$)
 
 
 ---
