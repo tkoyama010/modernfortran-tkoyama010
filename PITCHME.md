@@ -23,8 +23,9 @@
 ### はじめに
 
 
-ライブラリが使えなかったらPythonを使うだろうか？(画像は https://3.bp.blogspot.com より)
+ライブラリが使えなかったらPythonを使うだろうか？
 <img src="https://3.bp.blogspot.com/-CR-N5Kb5OOw/WoO1nOR-xHI/AAAAAAAAXKw/WJ0tWg108Zw_Va8Z1JCpnIHrDZz5YwSJQCLcBGAs/s1600/logo-stack-python.png">
+(https://3.bp.blogspot.com より)
 
 
 ---
@@ -283,6 +284,7 @@ end program
 
 ### まとめ
 
-言語の表現を近づければみんなが使ってくれる？(画像は https://upload.wikimedia.org より)
+言語の表現を近づければみんなが使ってくれる？
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Rotterdam%29_-_Google_Art_Project.jpg" width="400" height="400">
+(https://upload.wikimedia.org より)
