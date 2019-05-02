@@ -122,6 +122,20 @@ end program
 
 
 ```
+import numpy as np
+a = [4, 3, 2, 1, 5]
+a = np.sort(a)
+print(np.all(a == [1, 2, 3, 4, 5]))
+```
+
+
+---
+
+
+### Sorting
+
+
+```
 program test_sort
 use types, only: dp
 use utils, only: assert
