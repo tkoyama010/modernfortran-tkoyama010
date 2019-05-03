@@ -167,7 +167,7 @@ end program
 ---
 
 
-### Saving/loading 2D arrays
+### Saving/loading 2D arrays in Numpy/Scipy
 
 
 ```
@@ -184,7 +184,7 @@ print(d.shape == d2.shape)
 +++
 
 
-### Saving/loading 2D arrays
+### Saving/loading 2D arrays in fortran-utils
 
 
 ```
@@ -208,7 +208,7 @@ end program
 ---
 
 
-### Lapack interface (det)
+### Lapack interface (det) in Numpy/Scipy
 
 ```
 import numpy as np
@@ -222,7 +222,7 @@ print(abs(detA - 54.0) < 1.0e-09)
 +++
 
 
-### Lapack interface (det)
+### Lapack interface (det) in fortran-utils
 
 
 ```
@@ -247,7 +247,46 @@ end program
 ---
 
 
-### eigen value problem
+### diag in Numpy/Scipy
+
+
+```
+import numpy as np
+
+eps = 1.0e-9
+
+A = np.diag([1.0, 1.0, 1.0])
+print(np.max(A-np.eye(3)) < eps)
+```
+
+
+---
+
+
+### diag in fortran-utils
+
+
+```
+program test_diag
+use types, only: dp
+use utils, only: assert
+use linalg, only: diag, eye
+implicit none
+
+real(dp), parameter :: eps = 1e-9_dp
+real(dp) :: A(3,3)
+
+A = diag([1.0_dp, 1.0_dp, 1.0_dp])
+call assert(maxval(abs(A-eye(3))) < eps)
+
+end program
+```
+
+
+---
+
+
+### eigen value problem in Numpy/Scipy
 
 ```
 import numpy
@@ -263,7 +302,7 @@ print(np.max((cb-np.eye(5)) < 1.0e-09))
 +++
 
 
-### eigen value problem
+### eigen value problem in fortran-utils
 
 ```
 program test_eig
@@ -287,48 +326,6 @@ call assert(maxval(abs(cb - cmplx(eye(5)))) < eps)  ! eigenvectors are cartesian
 
 end program
 ```
-
-
----
-
-
-### Meshes (exponential, uniform)
-
-
----
-
-
-### Cubic splines
-
-
----
-
-
-### Cubic splines
-
-
----
-
-
-### Saving/loading PPM images
-
-
----
-
-
-### Saving/loading PPM images
-
-
----
-
-
-### HDF5 interface
-
-
----
-
-
-### HDF5 interface
 
 
 ---
