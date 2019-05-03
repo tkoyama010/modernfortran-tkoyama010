@@ -260,7 +260,7 @@ print(np.max(A-np.eye(3)) < eps)
 ```
 
 
----
++++
 
 
 ### diag in fortran-utils
