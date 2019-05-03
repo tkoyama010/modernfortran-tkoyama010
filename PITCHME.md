@@ -292,10 +292,11 @@ end program
 import numpy
 import numpy.linalg as LA
 
+eps = 1.0e-09
 B = 3.0*np.eye(5)
 lamb, cb = LA.eig(B)
-print(np.max((lamb-3) < 1.0e-09))
-print(np.max((cb-np.eye(5)) < 1.0e-09))
+print(np.max((lamb-3) < eps))
+print(np.max((cb-np.eye(5)) < eps))
 ```
 
 
@@ -323,6 +324,48 @@ B = 3*eye(5)
 call eig(B, lamb, cb)
 call assert(maxval(abs(lamb - 3.0_dp)) < eps)  ! all eigenvalues are 3
 call assert(maxval(abs(cb - cmplx(eye(5)))) < eps)  ! eigenvectors are cartesian unit basis vectors
+
+end program
+```
+
+
+---
+
+
+### inv in Numpy/Scipy
+
+
+```
+import numpy as np
+import numpy.linalg as LA
+
+eps = 1.0e-09
+
+D = np.array([[0.0, 1.0], [1.0, 0.0]])
+F = LA.inv(D)
+print(np.max(abs(D.dot(F)-np.eye(2))) < eps)
+```
+
+
++++
+
+
+### inv in fortran-utils
+
+
+```
+program test_inv
+use types, only: dp
+use utils, only: assert
+use linalg, only: inv, eye
+implicit none
+
+real(dp), parameter :: eps = 1e-9_dp
+real(dp) :: D(2,2), F(2,2)
+
+D = reshape([0.0_dp, 1.0_dp, 1.0_dp, 0.0_dp], shape=[2,2])  ! is its own inverse
+F = inv(D)
+call assert(maxval(abs(matmul(F, D) - cmplx(eye(2)))) < eps)
 
 end program
 ```
