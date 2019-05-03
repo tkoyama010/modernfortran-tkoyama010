@@ -65,12 +65,6 @@ https://github.com/tkoyama010/fortran-utils
 ---
 
 
-### Types (``dp``)
-
-
----
-
-
 ### Constants in Numpy/Scipy
 
 Euler's equation $e^{i\pi}+1=0$
@@ -107,7 +101,7 @@ end program
 ---
 
 
-### Sorting
+### Sorting in Numpy/Scipy
 
 
 ```
@@ -121,7 +115,7 @@ print(np.all(a == [1, 2, 3, 4, 5]))
 +++
 
 
-### Sorting
+### Sorting in fortran-utils
 
 
 ```
@@ -142,7 +136,20 @@ end program
 ---
 
 
-### Sorting
+### ArgSorting in Numpy/Scipy
+
+
+```
+import numpy as np
+a = [4, 3, 2, 1, 5]
+print(np.all(np.argsort(a) == [3, 2, 1, 0, 4]))
+```
+
+
+---
+
+
+### ArgSorting in fortran-utils
 
 
 ```
@@ -156,7 +163,6 @@ a = [4, 3, 2, 1, 5]
 call assert(all(argsort(a) == [4, 3, 2, 1, 5]))
 end program
 ```
-
 
 ---
 
