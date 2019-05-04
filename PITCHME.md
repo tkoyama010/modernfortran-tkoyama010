@@ -373,6 +373,52 @@ end program
 
 ---
 
+
+### solve in Numpy/Scipy
+
+
+```
+import numpy as np
+import numpy.linalg as LA
+
+eps = 1.0e-09
+
+d = [-1.0, -1.0, -1.0]
+C = 1j*np.eye(3)
+y = LA.solve(C, d)
+print(np.max(np.abs(y-1j)) < eps)
+```
+
+
++++
+
+
+### solve in fortran-utils
+
+
+```
+program test_solve
+use types, only: dp
+use utils, only: assert
+use linalg, only: solve, eye
+use constants, only : i_
+implicit none
+
+real(dp), parameter :: eps = 1e-9_dp
+real(dp) :: A(10,10), b(10), x(10)
+complex(dp) :: C(3,3), d(3), y(3)
+
+! test i*eye*y = -1 with solution y(:) = i
+d = cmplx(-1.0_dp + 0*i_)
+C = i_*cmplx(eye(3))
+y = solve(C, d)
+call assert(maxval(abs(y - i_)) < eps)
+
+end program
+```
+
+---
+
 #### まとめ
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Rotterdam%29_-_Google_Art_Project.jpg" width="400" height="400">
