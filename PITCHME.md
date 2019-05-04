@@ -441,7 +441,7 @@ print(np.trace(B) - 15.0j < eps)
 +++
 
 
-### trace in Numpy/Scipy
+### trace in fortran-utils
 
 
 ```
@@ -463,6 +463,25 @@ B = i_*reshape([1, 2, 3, 4, 5, 6, 7, 8, 9], shape=[3,3], order=[2,1])
 call assert(abs(trace(B) - 15*i_) < eps)
 
 end program
+```
+
+---
+
+
+### lstsq in Numpy/Scipy
+
+
+```
+```
+
+
+---
+
+
+### lstsq in fortran-utils
+
+
+```
 ```
 
 
