@@ -482,6 +482,23 @@ end program
 
 
 ```
+program test_lstsq
+use types, only: dp
+use utils, only: assert
+use linalg, only: lstsq, eye
+use constants, only : i_
+implicit none
+
+real(dp), parameter :: eps = 1e-9_dp
+complex(dp) :: C(3,3), d(3), y(3)
+
+! test i*eye*y = -1 with solution y(:) = i
+d = cmplx(-1.0_dp + 0*i_)
+C = i_*cmplx(eye(3))
+y = lstsq(C, d)
+call assert(maxval(abs(y - i_)) < eps)
+
+end program
 ```
 
 
