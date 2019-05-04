@@ -417,6 +417,55 @@ call assert(maxval(abs(y - i_)) < eps)
 end program
 ```
 
+
+---
+
+
+### trace in Numpy/Scipy
+
+
+```
+import numpy as np
+
+eps = 1.0e-09
+
+A = [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+print(np.trace(A) - 15.0 < eps)
+
+B = [[1j, 4j, 7j], [2j, 5j, 8j], [3j, 6j, 9j]]
+print(np.trace(B) - 15.0j < eps)
+
+```
+
+
++++
+
+
+### trace in Numpy/Scipy
+
+
+```
+program test_trace
+use types, only: dp
+use utils, only: assert
+use linalg, only: trace
+use constants, only : i_
+implicit none
+
+real(dp), parameter :: eps = 1e-9_dp
+real(dp) :: A(3,3)
+complex(dp) :: B(3,3)
+
+A = reshape([1, 2, 3, 4, 5, 6, 7, 8, 9], shape=[3,3], order=[2,1])
+call assert(abs(trace(A) - 15.0_dp) < eps)
+
+B = i_*reshape([1, 2, 3, 4, 5, 6, 7, 8, 9], shape=[3,3], order=[2,1])
+call assert(abs(trace(B) - 15*i_) < eps)
+
+end program
+```
+
+
 ---
 
 #### まとめ
