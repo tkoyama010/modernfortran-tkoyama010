@@ -526,4 +526,4 @@ end program
 
 #### まとめ
 
-もともと名前「FORTRAN」は「formula translation」に由来する
+もともと名前「FORTRAN」は「formula translation」に由来するので書きやすさを追求すればNumpyに似てくる？？？？
