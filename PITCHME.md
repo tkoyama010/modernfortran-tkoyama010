@@ -472,6 +472,16 @@ end program
 
 
 ```
+import numpy as np
+import numpy.linalg as LA
+
+eps = 1.0e-09
+
+d = [-1, -1, -1]
+C = 1j*np.eye(3)
+y = LA.lstsq(C, d)[0]
+print(np.max(np.abs(y - 1j)) < eps)
+
 ```
 
 
@@ -504,8 +514,16 @@ end program
 
 ---
 
+
 #### まとめ
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Rotterdam%29_-_Google_Art_Project.jpg" width="400" height="400">
 
 (https://upload.wikimedia.org より)
+
+
+---
+
+#### まとめ
+
+もともと名前「FORTRAN」は「formula translation」に由来する
