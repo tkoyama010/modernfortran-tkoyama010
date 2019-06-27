@@ -60,6 +60,15 @@ end program
 
 ---
 
+```fortran
+  ! determinants of real/complex square matrices:
+  interface det
+     module procedure ddet
+     module procedure zdet
+  end interface det
+```
+
+---
 
 #### まとめ
 
