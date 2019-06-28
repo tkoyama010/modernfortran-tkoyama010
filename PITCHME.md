@@ -157,54 +157,13 @@ end program
 ---
 
 ```fortran
-program test_eig
-use types, only: dp
-use utils, only: assert
-use linalg, only: eig, eye
-use constants, only : i_
-implicit none
-
-! test eigenvalue comutation for general matrices:
-
-real(dp), parameter :: eps = 1e-9_dp
-real(dp) :: A(2, 2), B(5, 5)
-complex(dp) :: AC(2, 2), lam(2), c(2, 2), r(2), n, lamb(5), cb(5, 5)
-integer :: i
-
-! test a matrix with complex eigenvalues/eigenvectors:
-A = reshape([1, -1, 2, 1], shape=[2, 2])  ! lambda_i = 1 \pm \sqrt(2) i
-call eig(A, lam, c)
-! TODO: add test for correctness of eigenvalues
-do i = 1, 2
-    ! Test proper norm of eigenvectors:
-    n = dot_product(c(:,i), c(:,i))
-    call assert(abs(n - 1) < eps)
-    ! Test that c(:, i) is an eigenvector with eigenvalue lam(i):
-    r = matmul(A-lam(i)*cmplx(eye(2)), c(:, i))
-    call assert(sqrt(abs(dot_product(r, r))) < eps)
-end do
-
 ! test a multiple of the unit matrix:
 B = 3*eye(5)
 call eig(B, lamb, cb)
 call assert(maxval(abs(lamb - 3.0_dp)) < eps)  ! all eigenvalues are 3
 call assert(maxval(abs(cb - cmplx(eye(5)))) < eps)  ! eigenvectors are cartesian unit basis vectors
-
-! test complex matrices:
-AC = reshape([1.0_dp+0*i_, 2*i_, 3*i_, -4.0_dp+0*i_], shape=[2,2])
-call eig(AC, lam, c)
-call assert(all(abs(lam - cmplx([-1.0_dp, -2.0_dp])) < eps))
-do i = 1, 2
-    ! Test proper norm of eigenvectors:
-    n = dot_product(c(:,i), c(:,i))
-    call assert(abs(n - 1) < eps)
-    ! Test that c(:, i) is an eigenvector with eigenvalue lam(i):
-    r = matmul(AC-lam(i)*cmplx(eye(2)), c(:, i))
-    call assert(sqrt(abs(dot_product(r, r))) < eps)
-end do
-
-end program
 ```
+@[1-5](単位行列に3を掛けた行列の固有値と固有ベクトルを計算します。)
 
 ---
 
@@ -217,12 +176,6 @@ end program
 
   ! TODO: add optional switch for left or right eigenvectors in deig() and zeig()?
   subroutine deig(A, lam, c)
-    real(dp), intent(in) :: A(:, :)  ! matrix for eigenvalue compuation
-    complex(dp), intent(out) :: lam(:)  ! eigenvalues: A c = lam c
-    complex(dp), intent(out) :: c(:, :)  ! eigenvectors: A c = lam c; c(i,j) = ith component of jth vec.
-    ! LAPACK variables for DGEEV:
-    real(dp), allocatable ::  At(:,:), vl(:,: ), vr(:,:), wi(:), work(:), wr(:)
-    integer :: info, lda, ldvl, ldvr, lwork, n, i
 
     lda = size(A(:,1))
     n = size(A(1,:))
@@ -236,6 +189,11 @@ end program
 
     call dgeev('N', 'V', n, At, lda, wr, wi, vl, ldvl, vr, ldvr, &
          work, lwork, info)
+```
+
+---
+
+```fortran
     if(info /= 0) then
        print *, "dgeev returned info = ", info
        if (info < 0) then
@@ -263,42 +221,6 @@ end program
        end if
     end do
   end subroutine deig
-
-  subroutine zeig(A, lam, c)
-    complex(dp), intent(in) :: A(:, :)  ! matrix to solve eigenproblem for
-    complex(dp), intent(out) :: lam(:)  ! eigenvalues: A c = lam c
-    complex(dp), intent(out) :: c(:,:)  ! eigenvectors: A c = lam c; c(i,j) = ith component of jth vec.
-    ! LAPACK variables:
-    integer :: info, lda, ldvl, ldvr, lwork, n, lrwork
-    real(dp), allocatable :: rwork(:)
-    complex(dp), allocatable :: vl(:,:), vr(:,:), work(:)
-
-    lda = size(A(:,1))
-    n = size(A(1,:))
-    call assert_shape(A, [n, n], "solve", "A")
-    call assert_shape(c, [n, n], "solve", "c")
-    ldvl = n
-    ldvr = n
-    lwork = 8*n  ! TODO: can this size be optimized? query first?
-    lrwork = 2*n
-    allocate(vl(ldvl,n), vr(ldvr,n), work(lwork), rwork(lrwork))
-    c = A
-    call zgeev('N', 'V', n, c, lda, lam, vl, ldvl, vr, ldvr, work, &
-         lwork, rwork, info)
-    if(info /= 0) then
-       print *, "zgeev returned info = ", info
-       if(info < 0) then
-          print *, "the ",-info, "-th argument had an illegal value."
-       else
-          print *, "the QR algorithm failed to compute all the"
-          print *, "eigenvalues, and no eigenvectors have been computed;"
-          print *, "elements and ", info+1, ":", n, " of W contain eigenvalues which have"
-          print *, "converged."
-       end if
-       call stop_error('eig: zgeev error')
-    end if
-    c = vr
-  end subroutine zeig
 ```
 
 ---
@@ -819,50 +741,6 @@ end program
 
   end function dinv
 
-  function zinv(Am) result(Bm)
-    ! Inverts the general complex matrix Am
-    complex(dp), intent(in) :: Am(:,:)   ! Matrix to be inverted
-    complex(dp) :: Bm(size(Am, 1), size(Am, 2))   ! Bm = inv(Am)
-    integer :: n, nb
-    ! lapack variables
-    integer :: lwork, info
-    complex(dp), allocatable:: Amt(:,:), work(:)
-    integer, allocatable:: ipiv(:)
-
-    n = size(Am, 1)
-    call assert_shape(Am, [n, n], "inv", "Am")
-    nb = ilaenv(1, 'ZGETRI', "UN", n, -1, -1, -1)  ! TODO: check UN param
-    if (nb < 1) nb = max(1, n)
-    lwork = n*nb
-    allocate(Amt(n,n), ipiv(n), work(lwork))
-    Amt = Am
-    call zgetrf(n, n, Amt, n, ipiv, info)
-    if (info /= 0) then
-       print *, "zgetrf returned info =", info
-       if (info < 0) then
-          print *, "the", -info, "-th argument had an illegal value"
-       else
-          print *, "U(", info, ",", info, ") is exactly zero; The factorization"
-          print *, "has been completed, but the factor U is exactly"
-          print *, "singular, and division by zero will occur if it is used"
-          print *, "to solve a system of equations."
-       end if
-       call stop_error('inv: zgetrf error')
-    end if
-    call zgetri(n, Amt, n, ipiv, work, lwork, info)
-    if (info /= 0) then
-       print *, "zgetri returned info =", info
-       if (info < 0) then
-          print *, "the", -info, "-th argument had an illegal value"
-       else
-          print *, "U(", info, ",", info, ") is exactly zero; the matrix is"
-          print *, "singular and its inverse could not be computed."
-       end if
-       call stop_error('inv: zgetri error')
-    end if
-    Bm = Amt
-  end function zinv
-
 ```
 
 ---
@@ -1377,6 +1255,10 @@ call assert(abs(trace(B) - 15*i_) < eps)
 
 end program
 ```
+@[1-6](traceについて説明します。)
+@[8-10](traceは正方行列に対して対角行列の和を計算したものです。)
+@[12-16](他の場合と同様に確認を行います。この場合のtraceの値は15です。)
+
 
 ---
 
@@ -1387,34 +1269,18 @@ end program
      module procedure ztrace
   end interface trace
 
-
-  ! TODO: add optional axis parameter in both xtrace() functions
   function dtrace(A) result(t)
-    ! return trace along the main diagonal
-    real(dp), intent(in) :: A(:,:)
-    real(dp) :: t
-    integer :: i
-
     t = 0.0_dp
     do i = 1,minval(shape(A))
        t = t + A(i,i)
     end do
   end function dtrace
-
-  function ztrace(A) result(t)
-    ! return trace along the main diagonal
-    complex(dp), intent(in) :: A(:,:)
-    complex(dp) :: t
-    integer :: i
-
-    t = 0*i_
-    do i = 1,minval(shape(A))
-       t = t + A(i,i)
-    end do
-  end function ztrace
 ```
+@[1-6](今回も実数と複素数は同じ形なので実数について説明します。)
+@[7-12](traceについては対角部分を足し合わせるだけで実現ができます。)
 
 ---
 
 #### まとめ
+- テンプレートなどを使えばもっと簡潔にかける？
 
