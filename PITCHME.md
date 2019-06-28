@@ -78,14 +78,6 @@ end program
 
 ```fortran
   function ddet(A) result(x)
-    ! compute the determinant of a real matrix using an LU factorization
-    real(dp), intent(in) :: A(:, :)
-    real(dp) :: x
-    integer :: i
-    ! LAPACK variables:
-    integer :: info, n
-    integer, allocatable :: ipiv(:)
-    real(dp), allocatable :: At(:,:)
 
     n = size(A(1,:))
     call assert_shape(A, [n, n], "det", "A")
@@ -93,10 +85,6 @@ end program
     At = A
     call dgetrf(n, n, At, n, ipiv, info)
 
-    ! At now contains the LU of the factorization A = PLU
-    ! as L has unit diagonal entries, the determinant can be computed
-    ! from the product of U's diagonal entries. Additional sign changes
-    ! stemming from the permutations P have to be taken into account as well.
     x = 1.0_dp
     do i = 1,n
        if(ipiv(i) /= i) then  ! additional sign change
@@ -108,25 +96,9 @@ end program
   end function ddet
 ```
 @[1](実数と複素数でソースの流れは同じですので、実数の方のみを説明します。)
+@[3-7](行列式計算にはLapackのLU分解のルーチンdgetrfを使用します。)
+@[9-16](LU分解された行列Atの対角項を使用して行列式を計算します。)
 
-
----
-
-```fortran
-
-    if(info /= 0) then
-       print *, "dgetrf returned info =", info
-       if (info < 0) then
-          print *, "the", -info, "-th argument had an illegal value"
-       else
-          print *, "U(", info, ",", info, ") is exactly zero; The factorization"
-          print *, "has been completed, but the factor U is exactly"
-          print *, "singular, and division by zero will occur if it is used"
-          print *, "to solve a system of equations."
-       end if
-       call stop_error('det: dgetrf error')
-    end if
-```
 
 ---
 
