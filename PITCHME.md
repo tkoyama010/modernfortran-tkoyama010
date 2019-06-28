@@ -57,6 +57,7 @@ call assert(abs(Bdet - (147.0_dp, -93.0_dp)) < eps)
 
 end program
 ```
+@[1-5](まずは行列式を計算する関数detについて解説します。)
 
 ---
 
