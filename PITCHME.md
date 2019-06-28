@@ -72,7 +72,7 @@ end program
      module procedure zdet
   end interface det
 ```
-@[1-5](procedure文を使用して実数の引数を持つ場合と複素数の引数を持つ場合の処理を分けています。)
+@[1-5](module procedureを使用して実数の引数を持つ場合と複素数の引数を持つ場合の処理を分けています。)
 
 ---
 
@@ -126,6 +126,8 @@ D = i_*reshape([1,0,0,0,2,0,0,0,3], shape=[3,3])
 call assert(maxval(abs(C - D)) < eps)
 end program
 ```
+@[1-6](次にdiagについて説明します。)
+@[8-10](実数の行列Aをdiagで定義して別途構築した行列と比較をしています。)
 
 ---
 
@@ -136,8 +138,6 @@ end program
      module procedure zdiag
   end interface diag
 
-  ! TODO: can assumed types help in Xdiag() and Xtrace()?
-  ! TODO: add optional axis parameter in both xdiag() functions
   function ddiag(x) result(A)
     ! construct real matrix from diagonal elements
     real(dp), intent(in) :: x(:)
@@ -149,20 +149,10 @@ end program
     A(:,:) = 0.0_dp
     forall(i=1:n) A(i,i) = x(i)
   end function ddiag
-
-  function zdiag(x) result(A)
-    ! construct complex matrix from diagonal elements
-    complex(dp), intent(in) :: x(:)
-    complex(dp), allocatable :: A(:,:)
-    integer :: i, n
-
-    n = size(x)
-    allocate(A(n,n))
-    A(:,:) = 0*i_
-    forall(i=1:n) A(i,i) = x(i)
-  end function zdiag
-
 ```
+@[1-5](module procedureを使用するのは同様です。)
+@[7-11](同様に実数の場合について説明します。)
+@[13-17](forall文を使い対角項に値を代入してきます。)
 
 ---
 
