@@ -164,6 +164,7 @@ call assert(maxval(abs(lamb - 3.0_dp)) < eps)  ! all eigenvalues are 3
 call assert(maxval(abs(cb - cmplx(eye(5)))) < eps)  ! eigenvectors are cartesian unit basis vectors
 ```
 @[1-5](単位行列に3を掛けた行列の固有値と固有ベクトルを計算します。)
+@[1-5](固有値は3となります。)
 
 ---
 
@@ -190,6 +191,9 @@ call assert(maxval(abs(cb - cmplx(eye(5)))) < eps)  ! eigenvectors are cartesian
     call dgeev('N', 'V', n, At, lda, wr, wi, vl, ldvl, vr, ldvr, &
          work, lwork, info)
 ```
+@[1-5](module procedureを使用して実数の引数を持つ場合と複素数の引数を持つ場合の処理を分けています。)
+@[7-13](まずはAとcが正方行列であるかを確認します。)
+@[14-21](その後Lapackのdgeevを呼び出して固有値を計算します。)
 
 ---
 
