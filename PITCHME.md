@@ -18,16 +18,16 @@ https://github.com/tkoyama010/fortran-utils
 ---
 
 
-### 今回は一部を詳しくコードリーディングします
+#### 今回は一部を詳しくコードリーディングします
 
 * Types (``dp``)
 * Constants (``pi``, ``e_``, ``i_``)
-* [Sorting]
+* [Sorting](https://github.com/tkoyama010/fortran-utils/blob/master/src/sorting.f90)
 * Saving/loading 2D arrays (``savetxt``, ``loadtxt``)
 * Meshes (exponential, uniform)
 * Cubic splines
 * Saving/loading PPM images
-* [Lapack interface (and a few simple f90 wrappers like ``eigh``, ``inv``)]
+* [Lapack interface (and a few simple f90 wrappers like ``eigh``, ``inv``)](https://github.com/tkoyama010/fortran-utils/blob/master/src/linalg.f90)
 * HDF5 interface
 
 ---
@@ -68,6 +68,8 @@ nums = nums(argsort(nums))
 end subroutine
 ```
 @[1-5](module procedureを使用してREALの配列とINTEGERの配列ベクトルの配列でそれぞれ処理を行います。)
+@[6-11](REALの配列を扱う関数内部では、配列をargsort関数を使用して並び替えています。)
+@[12-16](INTEGERの配列を扱う関数でも処理は同様です。)
 
 ---
 
@@ -83,6 +85,8 @@ end do
 call sortpairs(len2,vecs)
 end subroutine
 ```
+@[1-5](ベクトルをソートする関数はこちらです。)
+@[6-9](ベクトル距離の2乗を計算し、sortpairs関数を使用してベクトルを並び変えます。)
 
 ---
 
@@ -92,6 +96,8 @@ interface argsort
     module procedure iargsort, rargsort
 end interface
 ```
+@[1-4](先程説明したargsortについても説明します。)
+@[1-4](argsortもmodule procedureを使用してREALの配列とINTEGERの配列ベクトルの配列でそれぞれ処理を行います。)
 
 ---
 
@@ -114,6 +120,9 @@ do i = 1, N-1
 end do
 end function
 ```
+@[1-17]INTEGER配列のsort関数はこちらです。
+@[9]fortranのminloc関数を使って配列を並び替えています。
+@[1-17]ソートの方法については指定できません。
 
 ---
 
@@ -146,7 +155,6 @@ end program
 @[8-10](実数と複素数の3×3の行列と行列式のための変数を定義します。)
 @[12-14](実数型の計算と確認はこのように行います。)
 @[16-21](実数の行列の[1,1]の部分を虚数iにした行列の行列式はこのように計算します。)
-
 
 ---
 
@@ -183,7 +191,6 @@ end program
 @[1](実数と複素数でソースの流れは同じですので、実数の方のみを説明します。)
 @[3-7](行列式計算にはLapackのLU分解のルーチンdgetrfを使用します。)
 @[9-16](LU分解された行列Atの対角項を使用して行列式を計算します。)
-
 
 ---
 
@@ -369,5 +376,7 @@ end program
 ---
 
 #### まとめ
-- テンプレートなどを使えば実数と複素数の部分は一般化できる？Lapackのルーチンが異なるので難しか・・・
+- sort関数と線形代数系の関数についてコードリーディングをしました。
+- argsort関数はソートの種類を選ぶなどの改善ができるかもしれません。
+- テンプレートなどを使えば実数と複素数の部分は一般化できるかもしれません。ただ、Lapackのルーチンが異なるので難しいかもしれません。
 
