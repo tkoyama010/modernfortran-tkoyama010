@@ -57,5 +57,53 @@ WARNINGが1つでも出たらNGになるコンパイルオプションです@siz
 
 ---
 
-### masterのテスト状況@size[2.0em](🤔) 
+### DO文の修正@size[2.0em](🏃) 
 
+[コミット](https://github.com/certik/fortran-utils/pull/24/commits/1995866a2b802476838dbee847a6fe4f7e60c249)
+
+[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232200514)
+
+---
+
+### DO文の修正@size[2.0em](🏃) 
+
+[コミット](https://github.com/tkoyama010/fortran-utils/commit/7f4c355f8867da451be6192d50896eff95187035)
+
+[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232207124)
+
+---
+
+### 関数の未使用@size[2.0em](🏃) 
+
+[コミット](https://github.com/tkoyama010/fortran-utils/commit/5e3ac66a3be635819f4d1be6a84bcb878da3a4d8)
+
+[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232213983)
+
+---
+
+### 実数値の比較のエラー@size[2.0em](🏃) 
+
+[コミット](https://github.com/tkoyama010/fortran-utils/commit/95aef3deae9c1a61e33c40dd4ebb7823430e74f4)
+
+[テスト結果](https://travis-ci.com/tkoyama010/fortran-utils/builds/128705063)
+
+❌この修正は誤りです(後ででてきます)
+
+---
+
+### 実数値の比較のエラー@size[2.0em](🏃) 
+
+[コミット](https://github.com/tkoyama010/fortran-utils/commit/fe79d568bdc217a04e114f4b6f43e64fe93d2c99)
+
+[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232289476)
+
+❌この修正は誤りです(後ででてきます)
+
+[テスト結果](https://travis-ci.com/tkoyama010/fortran-utils/builds/128721873)
+
+---
+
+### 実数値の比較のエラー@size[2.0em](🏃) 
+
+[コミット](https://github.com/tkoyama010/fortran-utils/commit/c4c39f6a9fc64638f99f1c0f554ff0b3128bf9d9)
+[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232416922)
