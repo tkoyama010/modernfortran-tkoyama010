@@ -43,6 +43,8 @@ https://github.com/certik/fortran-utils
 
 [テストに関して以前出されたIssue](https://github.com/certik/fortran-utils/issues/19)
 
+WARNINGが1つでも出たらNGになるコンパイルオプションです@size[2.0em](😱) 
+
 ---
 
 ### masterのテスト状況@size[2.0em](🤔) 
@@ -51,9 +53,7 @@ https://github.com/certik/fortran-utils
 
 [テストに関して以前出されたIssue](https://github.com/certik/fortran-utils/issues/19)
 
-このテストが通るまで直し続けます。
-
-ご指摘お願いします@size[2.0em](🙇) 
+このテストが通るまで直し続けます。ご指摘お願いします@size[2.0em](🙇) 
 
 ---
 
