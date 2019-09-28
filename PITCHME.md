@@ -33,10 +33,11 @@ https://github.com/certik/fortran-utils
 
 けっこう適当にやってました@size[2.0em](💦)
 
-よい子@size[2.0em](👼)なのでまじめに修正して[PR](https://github.com/certik/fortran-utils/pull/24)作りました
+@size[2.0em](👼)よい子なのでまじめに修正して[PR](https://github.com/certik/fortran-utils/pull/24)作りました
 
 ---
 
-### masterのテスト状況(2019/9/29現在)@size[2.0em](🙇) 
+### masterのテスト状況@size[2.0em](🤔) 
 
-[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232185941)
+[テスト結果(2019/9/29現在)](https://github.com/tkoyama010/fortran-utils/runs/232185941)
+[テストに関して以前出されたIssue](https://github.com/certik/fortran-utils/issues/19)
