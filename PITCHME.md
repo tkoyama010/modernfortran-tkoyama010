@@ -32,7 +32,7 @@ https://github.com/certik/fortran-utils
 
 ### 反省文@size[2.0em](🙇) 
 
-けっこう適当にやってました@size[2.0em](💦)なので
+けっこう適当にやってました@size[2.0em](💦)
 
 よい子@size[2.0em](👼)なのでまじめに修正して[PR](https://github.com/certik/fortran-utils/pull/24)作りました
 
