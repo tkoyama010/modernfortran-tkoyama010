@@ -51,7 +51,9 @@ https://github.com/certik/fortran-utils
 
 [テストに関して以前出されたIssue](https://github.com/certik/fortran-utils/issues/19)
 
-このテストが通るまで直し続けます。気づいた点があったらその場で指摘お願いします@size[2.0em](🙇) 
+このテストが通るまで直し続けます。
+
+ご指摘お願いします@size[2.0em](🙇) 
 
 ---
 
