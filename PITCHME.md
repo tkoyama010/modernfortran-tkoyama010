@@ -42,3 +42,18 @@ https://github.com/certik/fortran-utils
 [テスト結果(2019/9/29現在)](https://github.com/tkoyama010/fortran-utils/runs/232185941)
 
 [テストに関して以前出されたIssue](https://github.com/certik/fortran-utils/issues/19)
+
+---
+
+### masterのテスト状況@size[2.0em](🤔) 
+
+[テスト結果(2019/9/29現在)](https://github.com/tkoyama010/fortran-utils/runs/232185941)
+
+[テストに関して以前出されたIssue](https://github.com/certik/fortran-utils/issues/19)
+
+このテストが通るまで直し続けます。気づいた点があったらその場で指摘お願いします@size[2.0em](🙇) 
+
+---
+
+### masterのテスト状況@size[2.0em](🤔) 
+
