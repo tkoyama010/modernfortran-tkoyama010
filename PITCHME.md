@@ -27,3 +27,16 @@ https://github.com/certik/fortran-utils
 
 ~~https://github.com/tkoyama010/fortran-utils~~
 
+---
+
+
+### fortran-utilsとは？@size[2.0em](🤠) 
+
+けっこう適当にやってました@size[2.0em](💦)なので
+
+まじめに修正してPR作りました@size[2.0em](👼)
+
+~~一部テストが通らない部分があったのでforkして変更をしました。~~
+
+~~https://github.com/tkoyama010/fortran-utils~~
+
