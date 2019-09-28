@@ -29,14 +29,14 @@ https://github.com/certik/fortran-utils
 
 ---
 
-
 ### 反省文@size[2.0em](🙇) 
 
 けっこう適当にやってました@size[2.0em](💦)
 
 よい子@size[2.0em](👼)なのでまじめに修正して[PR](https://github.com/certik/fortran-utils/pull/24)作りました
 
-~~一部テストが通らない部分があったのでforkして変更をしました。~~
+---
 
-~~https://github.com/tkoyama010/fortran-utils~~
+### masterのテスト状況(2019/9/29現在)@size[2.0em](🙇) 
 
+[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232185941)
