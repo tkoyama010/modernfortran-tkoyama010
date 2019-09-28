@@ -30,11 +30,11 @@ https://github.com/certik/fortran-utils
 ---
 
 
-### fortran-utilsとは？@size[2.0em](🤠) 
+### 反省文@size[2.0em](🙇) 
 
 けっこう適当にやってました@size[2.0em](💦)なので
 
-まじめに修正してPR作りました@size[2.0em](👼)
+よい子@size[2.0em](👼)なのでまじめに修正して[PR](https://github.com/certik/fortran-utils/pull/24)作りました
 
 ~~一部テストが通らない部分があったのでforkして変更をしました。~~
 
