@@ -96,6 +96,7 @@ WARNINGが1つでも出たらNGになるコンパイルオプションです@siz
 ### 倍精度実数からの単精度複素数の作成@size[2.0em](🏃) 
 
 [テスト結果](https://github.com/tkoyama010/fortran-utils/runs/239593677)
+
 [コミット](https://github.com/tkoyama010/fortran-utils/commit/1ea516cb35924167d16d9ecab72a9339ce9bd0ce)
 
 ---
@@ -108,11 +109,12 @@ WARNINGが1つでも出たらNGになるコンパイルオプションです@siz
 
 ### まとめ
 
-- TravisのエラーをもとにPR
+- Travisのエラーをもとに[PR](https://github.com/certik/fortran-utils/pull/24/files)
 - 新しい[issue](https://github.com/certik/fortran-utils/issues/25)を作成
 
 ---
 
 ### LFortran?
 [Twitter](https://twitter.com/OndrejCertik/status/1150507549822558208)
+
 [demo](https://lfortran.org/)
