@@ -3,6 +3,11 @@
 
 ---
 
+### fortran-utilsとは？@size[2.0em](🤠) 
+
+詳しくは[前回](https://gitpitch.com/tkoyama010/modernfortran-tkoyama010/modernfortran.f02#/)と[前々回](https://gitpitch.com/tkoyama010/modernfortran-tkoyama010/modernfortran.f01#/)の資料を見てください。
+
+---
 
 ### fortran-utilsとは？@size[2.0em](🤠) 
 
@@ -16,7 +21,6 @@ https://github.com/tkoyama010/fortran-utils
 
 ---
 
-
 ### fortran-utilsとは？@size[2.0em](🤠) 
 
 [certik](https://github.com/certik)氏により2016年まで開発されていたfortranの便利なutils集です。
@@ -29,7 +33,7 @@ https://github.com/certik/fortran-utils
 
 ---
 
-### 反省文@size[2.0em](🙇) 
+### 反省@size[2.0em](🙇) 
 
 けっこう適当にやってました@size[2.0em](💦)
 
