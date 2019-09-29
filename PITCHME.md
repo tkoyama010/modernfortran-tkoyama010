@@ -103,7 +103,7 @@ WARNINGが1つでも出たらNGになるコンパイルオプションです@siz
 
 ---
 
-### 実数値の比較のエラー@size[2.0em](🏃) 
+### インデックスの問題@size[2.0em](🏃) 
 
 [コミット](https://github.com/tkoyama010/fortran-utils/commit/c4c39f6a9fc64638f99f1c0f554ff0b3128bf9d9)
 
