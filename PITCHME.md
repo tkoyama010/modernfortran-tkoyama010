@@ -81,28 +81,6 @@ WARNINGが1つでも出たらNGになるコンパイルオプションです@siz
 
 ---
 
-### 実数値の比較のエラー@size[2.0em](🏃) 
-
-[コミット](https://github.com/tkoyama010/fortran-utils/commit/95aef3deae9c1a61e33c40dd4ebb7823430e74f4)
-
-[テスト結果](https://travis-ci.com/tkoyama010/fortran-utils/builds/128705063)
-
-❌この修正は誤りです(後ででてきます)
-
----
-
-### 実数値の比較のエラー@size[2.0em](🏃) 
-
-[コミット](https://github.com/tkoyama010/fortran-utils/commit/fe79d568bdc217a04e114f4b6f43e64fe93d2c99)
-
-[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232289476)
-
-❌この修正は誤りです(後ででてきます)
-
-[テスト結果](https://travis-ci.com/tkoyama010/fortran-utils/builds/128721873)
-
----
-
 ### インデックスの問題@size[2.0em](🏃) 
 
 [コミット](https://github.com/tkoyama010/fortran-utils/commit/c4c39f6a9fc64638f99f1c0f554ff0b3128bf9d9)
