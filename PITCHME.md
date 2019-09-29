@@ -11,7 +11,7 @@
 
 ### fortran-utilsとは？@size[2.0em](🤠) 
 
-[certik](https://github.com/certik)氏により~2016年まで開発されていた~fortranの便利な[utils](
+[certik](https://github.com/certik)氏により~~2016年まで開発されていた~~fortranの便利な[utils](
 https://github.com/certik/fortran-utils)集です。
 
 一部テストが通らない部分があったので[fork](https://github.com/tkoyama010/fortran-utils)して変更をしました。
