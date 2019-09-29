@@ -113,5 +113,6 @@ WARNINGが1つでも出たらNGになるコンパイルオプションです@siz
 
 ---
 
-### Tips
-https://twitter.com/OndrejCertik/status/1150507549822558208
+### LFortran?
+[Twitter](https://twitter.com/OndrejCertik/status/1150507549822558208)
+[demo](https://lfortran.org/)
