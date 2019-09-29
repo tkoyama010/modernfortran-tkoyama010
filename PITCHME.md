@@ -59,33 +59,53 @@ WARNINGが1つでも出たらNGになるコンパイルオプションです@siz
 
 ### DO文の修正@size[2.0em](🏃) 
 
-[コミット](https://github.com/certik/fortran-utils/pull/24/commits/1995866a2b802476838dbee847a6fe4f7e60c249)
-
-[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232200514)
-
----
-
-### DO文の修正@size[2.0em](🏃) 
-
-[コミット](https://github.com/tkoyama010/fortran-utils/commit/7f4c355f8867da451be6192d50896eff95187035)
-
 [テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232207124)
+
+[コミット](https://github.com/tkoyama010/fortran-utils/commit/1995866a2b802476838dbee847a6fe4f7e60c249)
 
 ---
 
 ### 関数の未使用@size[2.0em](🏃) 
 
-[コミット](https://github.com/tkoyama010/fortran-utils/commit/5e3ac66a3be635819f4d1be6a84bcb878da3a4d8)
+[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232207124)
 
-[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232213983)
+[コミット](https://github.com/tkoyama010/fortran-utils/commit/5e3ac66a3be635819f4d1be6a84bcb878da3a4d8)
 
 ---
 
-### インデックスの問題@size[2.0em](🏃) 
+### 負になる可能性があるインデックス@size[2.0em](🏃) 
+
+[テスト結果](https://travis-ci.com/tkoyama010/fortran-utils/builds/128721873)
 
 [コミット](https://github.com/tkoyama010/fortran-utils/commit/c4c39f6a9fc64638f99f1c0f554ff0b3128bf9d9)
 
-[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/232416922)
+---
+
+### 実数値が等しいかの比較@size[2.0em](🏃) 
+
+[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/236940764)
+
+[コミット](https://github.com/tkoyama010/fortran-utils/commit/bcbdd5dc10da180db00c001a64215928006183bd)
+
+---
+
+### 倍精度実数からの単精度複素数の作成@size[2.0em](🏃) 
+
+[テスト結果](https://github.com/tkoyama010/fortran-utils/runs/239593677)
+[コミット](https://github.com/tkoyama010/fortran-utils/commit/1ea516cb35924167d16d9ecab72a9339ce9bd0ce)
+
+---
+
+### レビュー@size[2.0em](👨‍💻) 
+
+[レビュー](https://github.com/certik/fortran-utils/pull/24)
+
+---
+
+### まとめ
+
+- TravisのエラーをもとにPR
+- 新しい[issue](https://github.com/certik/fortran-utils/issues/25)を作成
 
 ---
 
